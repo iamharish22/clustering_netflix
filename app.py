@@ -8,7 +8,7 @@ from sklearn.cluster import KMeans
 # -----------------------
 @st.cache_data
 def load_and_prepare_data():
-    df = pd.read_csv("C:/Users/OM/OneDrive/Projects/module 6 app/netflix_titles.csv")
+    df = pd.read_csv("netflix_titles.csv")
     df = df.fillna("")
     df["combined"] = df["type"] + " " + df["listed_in"] + " " + df["description"]
     return df
